@@ -1,0 +1,42 @@
+services:
+  sonarqube:
+    image: sonarqube:lts-community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+
+  sonarscanner:
+    image: sonarsource/sonar-scanner-cli:11.3
+    container_name: sonarscanner
+    depends_on:
+      - sonarqube
+    volumes:
+      - ./project:/usr/src
+      - ./project/sonar-project.properties:/usr/src/sonar-project.properties
+    environment:
+      - SONAR_HOST_URL=http://sonarqube:9000
+      - SONAR_LOGIN=admin
+      - SONAR_PASSWORD=Admin1234567?
+    working_dir: /usr/src
+    env_file:
+      - .env
+    entrypoint: >
+      /bin/sh -c "
+        echo 'Waiting for SonarQube to be ready...' &&
+        until curl -s http://sonarqube:9000/api/system/status | grep -q '\"status\":\"UP\"'; do
+        sleep 5
+        done &&
+        echo 'SonarQube is UP. Launching analysis...' &&
+        sonar-scanner
+      "
+volumes:
+  sonarqube_data:
+  sonarqube_logs:
+  sonarqube_extensions:
+              
