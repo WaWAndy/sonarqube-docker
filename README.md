@@ -14,11 +14,35 @@ Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, F
 
 2. Table of contents
 
-3. how to install and run the project
+3. how to install, test and use the project
 
-   Mise en place de Sonarqube et test 
+   Install and test
 
-   <img width="1037" height="27" alt="image" src="https://github.com/user-attachments/assets/454da387-3044-4cc6-9638-b4cee8cc436a" />
+   1. docker compose up --build
+   2. docker logs sonarscanner
+   3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
+   4. go to http://sonarqube:9000
+   5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
+   6. Check the analysis
+  
+   Live use 
+
+   1. docker compose down -v (if you tested before)
+   2. replace sonarqube-docker/project/restaurant with the folder you want to analyze
+   3. docker compose up --build
+   4. docker logs sonarscanner
+   3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
+   4. go to http://sonarqube:9000
+   5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
+   6. Check the analysis
+   7. edit sonarqube-docker/project/sonnar-project.propreties and replace the admin password with the new one: Admin1234567?
+   8. Now you can work on your own folder
+   9. When you want to analyse the changes you made, just type docker compose up sonarscanner
+   10. Wait for the new analysis to be done and successfull
+   11. Refresh the page on http://sonarqube:9000 and you will see you modification in the codebase
+    
+   
+
 
 
 5. How to use the project
