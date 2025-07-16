@@ -3,12 +3,14 @@
 
 ## 1. Project description
 
-En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web en PHP et Python. Ces projets ont parfois représentés des milliers de lignes de codes et pouvaient comporter des vulnérabilités en termes de cybersécurité ou de potentiels problème de maintenance sur le long terme. 
+As an occasional developer, I have often worked on web application projects in PHP and Python. These projects sometimes involved thousands of lines of code and could contain cybersecurity vulnerabilities or potential long-term maintenance issues.
 
-Il était donc important de pouvoir compter sur un outil afin d'analyser le code et déterminer comment l'améliorer, tant sur le plan de la sécurité que de la robustesse. Sonarqube a été choisi pour pluseieurs rasions. D'une part, il permet de réaliser une Analyse approfnodie de la qualité du code en détectant les bugs, les vulnérabilités, les code de mauvaise qualité et les duplication). De plus, cet outil en édition "community" opensource permet d'analyser un grand nombre de languages  (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaCript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript, VB.NET, XML). Sonarqube possède également un iterface graphique clair et moderne. 
+It was therefore important to rely on a tool to analyze the code and determine how to improve it, both in terms of security and robustness. **SonarQube** was chosen for several reasons: on the one hand, it allows an in-**depth analysis of code quality** by detecting bugs, vulnerabilities, poor-quality code, and duplications.
 
+In addition, this tool, in its open-source "Community" edition, supports the **analysis of many languages** (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaScript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript, VB.NET, XML). SonarQube also provides a **clear and modern graphical interface**.
 
-Dans un objectif de portabilité et de réplication, le projet se base sur Docker. 
+To ensure portability and reproducibility, the project is based on **Docker**.
+
 
 
 
@@ -19,25 +21,25 @@ Dans un objectif de portabilité et de réplication, le projet se base sur Docke
    1. docker compose up --build
    2. docker logs sonarscanner
    3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
-   4. go to http://sonarqube:9000
+   4. Go to http://sonarqube:9000
    5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
    6. Check the analysis
   
    ### 2.2 Live use
 
    1. docker compose down -v (if you tested before)
-   2. replace sonarqube-docker/project/restaurant with the folder you want to analyze
+   2. Replace sonarqube-docker/project/restaurant with the folder you want to analyze
    3. docker compose up --build
    4. docker logs sonarscanner
    3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
-   4. go to http://sonarqube:9000
+   4. Go to http://sonarqube:9000
    5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
    6. Check the analysis
-   7. edit sonarqube-docker/project/sonnar-project.propreties and replace the admin password with the new one: Admin1234567?
+   7. Edit sonarqube-docker/project/sonnar-project.propreties and replace the admin password with the new one: Admin1234567?
    8. Now you can work on your own folder
    9. When you want to analyse the changes you made, just type docker compose up sonarscanner
    10. Wait for the new analysis to be done and successfull
-   11. Refresh the page on http://sonarqube:9000 and you will see you modification in the codebase
+   11. Refresh the page on http://sonarqube:9000 and you will see you modification in the analyzed codebase
     
    
 
