@@ -16,7 +16,12 @@ Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, F
 
 3. how to install and run the project
 
-4. How to use the project
+   Mise en place de Sonarqube et test 
+
+   <img width="1037" height="27" alt="image" src="https://github.com/user-attachments/assets/454da387-3044-4cc6-9638-b4cee8cc436a" />
+
+
+5. How to use the project
 
 
 Docker
