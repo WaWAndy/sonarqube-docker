@@ -3,7 +3,11 @@ Sonarqube-docker
 
 Project description
 
-En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web reposant sur PHP et Python. étant donné que ces projets étaient relativement larges et destinés à être disponibles sur internet, la possibilité d'introduire des vulnérabilités critiques ou des bugs était forte. Il était donc important de pouvoir compter sur un outil afin de d'analyser le code et déterminer comment améliorer le code, tant sur le plan de la sécurité que de la robustesse. 
+En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web en PHP et Python. étant donné que ces projets étaient relativement larges et destinés à être disponibles sur internet, les questions de maintenance sur le long terme et la cybersécurité se sont imposés. Il était donc important de pouvoir compter sur un outil afin d'analyser le code et déterminer comment l'améliorer, tant sur le plan de la sécurité que de la robustesse. C'est ainsi que Sonarqube a été choisi comme moyen de vérifier la qualité du code. Dans un objectif de portabilité et de réplication le projet se base sur Docker. Dans ce projet, un projet a été inclus en guise d'exemple. 
+
+Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaCript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript; VB.NET, XML
+
+
 
 Docker
 
