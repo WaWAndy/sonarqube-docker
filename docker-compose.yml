@@ -22,8 +22,6 @@ services:
     environment:
       - SONAR_HOST_URL=http://sonarqube:9000
     working_dir: /usr/src
-      #env_file:
-      #- .env.example
     entrypoint: >
       /bin/sh -c "
         echo 'Waiting for SonarQube to be ready...' &&
