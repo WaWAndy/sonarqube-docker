@@ -37,7 +37,7 @@ To ensure portability and reproducibility, the project is based on **Docker**.
    6. Check the analysis
    7. Edit sonarqube-docker/project/sonnar-project.propreties and replace the admin password with the new one: Admin1234567?
    8. Now you can work on your own folder
-   9. When you want to analyse the changes you made, just type docker compose up sonarscanner
+   9. When you want to analyse the changes you made, just type _docker compose up sonarscanner_
    10. Wait for the new analysis to be done and successfull
    11. Refresh the page on http://sonarqube:9000 and you will see you modification in the analyzed codebase
     
