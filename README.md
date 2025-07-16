@@ -1,94 +1,46 @@
-🚀 SonarQube Docker Project
+# Sonarqube-docker
 
-Ce projet permet de déployer rapidement une instance SonarQube avec Docker Compose, accompagnée d’un exemple de configuration pour scanner un projet.
 
-🎟️ Prérequis
+## 1. Project description
 
-Docker
+As an occasional developer, I have often worked on web application projects in PHP and Python. These projects sometimes involved thousands of lines of code and could contain cybersecurity vulnerabilities or potential long-term maintenance issues.
 
-Docker Compose
+It was therefore important to rely on a tool to analyze the code and determine how to improve it, both in terms of security and robustness. **SonarQube** was chosen for several reasons: on the one hand, it allows an in-**depth analysis of code quality** by detecting bugs, vulnerabilities, poor-quality code, and duplications.
 
-📝 Contenu du projet
+In addition, this tool, in its open-source "Community" edition, supports the **analysis of many languages** (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaScript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript, VB.NET, XML). SonarQube also provides a **clear and modern graphical interface**.
 
-docker-compose.yml : Configuration Docker Compose pour SonarQube et SonarScanner
+To ensure portability and reproducibility, the project is based on **Docker**.
 
-.env.example : Exemple de fichier d’environnement
 
-sonar-project.properties : Exemple de configuration SonarScanner
 
-.gitignore : Fichiers/dossiers ignorés dans le repo Git
 
-report-task.txt : Rapport d'analyse SonarScanner
+## 2. how to install, test and use the project
 
-⚙️ Déploiement rapide
+   ### 2.1 Install and test
 
-1️⃣ Cloner ce dépôt :
+   1. _docker compose up --build_
+   2. _docker logs sonarscanner_
+   3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
+   4. Go to http://sonarqube:9000
+   5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
+   6. Check the analysis
+  
+   ### 2.2 Live use
 
-git clone https://github.com/<ton-utilisateur>/sonarqube-docker.git
-cd sonarqube-docker
+   1. _docker compose down -v_ (if you tested before)
+   2. Replace sonarqube-docker/project/restaurant with the folder you want to analyze
+   3. _docker compose up --build_
+   4. _docker logs sonarscanner_
+   3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
+   4. Go to http://sonarqube:9000
+   5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
+   6. Check the analysis
+   7. Edit sonarqube-docker/project/sonnar-project.propreties and replace the admin password with the new one: Admin1234567?
+   8. Now you can work on your own folder
+   9. When you want to analyse the changes you made, just type _docker compose up sonarscanner_
+   10. Wait for the new analysis to be done and successfull
+   11. Refresh the page on http://sonarqube:9000 and you will see you modification in the analyzed codebase
+    
+   
 
-2️⃣ Démarrer les services :
 
-docker compose up --build
-
-3️⃣ Attendre que SonarQube soit prêt :
-
-Vérifier les logs du conteneur sonarscanner :
-
-docker logs sonarscanner
-
-Attendre les messages :
-
-INFO ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test
-INFO EXECUTION SUCCESS
-
-4️⃣ Accéder à l'interface web :
-
-http://<ip_serveur>:9000
-
-5️⃣ Connexion initiale :
-
-Login : admin
-
-Password : admin
-
-👉 À la première connexion :
-
-SonarQube demande de changer le mot de passe. Exemple :
-
-Nouveau mot de passe : Admin1234567?
-
-6️⃣ Consulter l’analyse :
-
-Accéder au tableau de bord du projet :Tableau de bord SonarQube (local)
-
-🔐 Remarques de sécurité
-
-Important : Ne jamais utiliser admin/admin en production.
-
-Préférer l’utilisation de tokens d’analyse pour authentifier SonarScanner.
-
-📂 Structure recommandée
-
-sonarqube-docker/
-├── .env.example
-├── .gitignore
-├── docker-compose.yml
-├── sonar-project.properties
-├── report-task.txt
-└── README.md
-
-💍 .gitignore
-
-Le fichier .gitignore ignore notamment :
-
-.env
-*.log
-*.tmp
-node_modules/
-__pycache__/
-.DS_Store
-
-📝 Auteur
-
-Projet maintenu par [Ton Nom ou Organisation].
