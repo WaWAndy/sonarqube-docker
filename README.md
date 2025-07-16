@@ -1,8 +1,9 @@
-🚀 SonarQube Docker Project
+Sonarqube-docker
 
-Ce projet permet de déployer rapidement une instance SonarQube avec Docker Compose, accompagnée d’un exemple de configuration pour scanner un projet.
 
-🎟️ Prérequis
+Project description
+
+En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web reposant sur PHP et Python. étant donné que ces projets étaient relativement larges et destinés à être disponibles sur internet, la possibilité d'introduire des vulnérabilités critiques ou des bugs était forte. Il était donc important de pouvoir compter sur un outil afin de d'analyser le code et déterminer comment améliorer le code, tant sur le plan de la sécurité que de la robustesse. 
 
 Docker
 
