@@ -1,12 +1,22 @@
 Sonarqube-docker
 
 
-Project description
+1. Project description
 
-En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web en PHP et Python. étant donné que ces projets étaient relativement larges et destinés à être disponibles sur internet, les questions de maintenance sur le long terme et la cybersécurité se sont imposés. Il était donc important de pouvoir compter sur un outil afin d'analyser le code et déterminer comment l'améliorer, tant sur le plan de la sécurité que de la robustesse. C'est ainsi que Sonarqube a été choisi comme moyen de vérifier la qualité du code. Dans un objectif de portabilité et de réplication le projet se base sur Docker. Dans ce projet, un projet a été inclus en guise d'exemple. 
+En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web en PHP et Python. étant donné que ces projets étaient relativement larges et destinés à être disponibles sur internet, les questions de maintenance sur le long terme et la cybersécurité se sont imposés. Il était donc important de pouvoir compter sur un outil afin d'analyser le code et déterminer comment l'améliorer, tant sur le plan de la sécurité que de la robustesse. C'est ainsi que Sonarqube a été choisi comme moyen de vérifier la qualité du code. Dans un objectif de portabilité et de réplication le projet se base sur Docker. Dans ce projet est inclus un dossier d'exemple (sonarqube-docker/project/restaurant) afin d'avoir une première vue d'exemple. 
 
-Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaCript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript; VB.NET, XML
+Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaCript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript, VB.NET, XML
 
+
+
+
+
+
+2. Table of contents
+
+3. how to install and run the project
+
+4. How to use the project
 
 
 Docker
