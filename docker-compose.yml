@@ -21,11 +21,9 @@ services:
       - ./project/sonar-project.properties:/usr/src/sonar-project.properties
     environment:
       - SONAR_HOST_URL=http://sonarqube:9000
-        #- SONAR_LOGIN=admin
-        #- SONAR_PASSWORD=Admin1234567?
     working_dir: /usr/src
-    env_file:
-      - .env
+      #env_file:
+      #- .env.example
     entrypoint: >
       /bin/sh -c "
         echo 'Waiting for SonarQube to be ready...' &&

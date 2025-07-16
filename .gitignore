@@ -4,3 +4,5 @@
 node_modules/
 __pycache__/
 .DS_Store
+project/.scannerwork/report-task.txt
+project/.scannerwork/.sonar_lock
