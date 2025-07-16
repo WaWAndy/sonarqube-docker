@@ -18,8 +18,8 @@ To ensure portability and reproducibility, the project is based on **Docker**.
 
    ### 2.1 Install and test
 
-   1. docker compose up --build
-   2. docker logs sonarscanner
+   1. _docker compose up --build_
+   2. _docker logs sonarscanner_
    3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
    4. Go to http://sonarqube:9000
    5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
@@ -27,10 +27,10 @@ To ensure portability and reproducibility, the project is based on **Docker**.
   
    ### 2.2 Live use
 
-   1. docker compose down -v (if you tested before)
+   1. _docker compose down -v_ (if you tested before)
    2. Replace sonarqube-docker/project/restaurant with the folder you want to analyze
-   3. docker compose up --build
-   4. docker logs sonarscanner
+   3. _docker compose up --build_
+   4. _docker logs sonarscanner_
    3. Wait for message "ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test"
    4. Go to http://sonarqube:9000
    5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
