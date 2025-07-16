@@ -1,22 +1,20 @@
-Sonarqube-docker
+# Sonarqube-docker
 
 
-1. Project description
+## 1. Project description
 
-En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web en PHP et Python. étant donné que ces projets étaient relativement larges et destinés à être disponibles sur internet, les questions de maintenance sur le long terme et la cybersécurité se sont imposés. Il était donc important de pouvoir compter sur un outil afin d'analyser le code et déterminer comment l'améliorer, tant sur le plan de la sécurité que de la robustesse. C'est ainsi que Sonarqube a été choisi comme moyen de vérifier la qualité du code. Dans un objectif de portabilité et de réplication le projet se base sur Docker. Dans ce projet est inclus un dossier d'exemple (sonarqube-docker/project/restaurant) afin d'avoir une première vue d'exemple. 
+En tant que développeur occasionnel, j'ai souvent eu l'occasion de travailler sur des projets d'applications web en PHP et Python. Ces projets ont parfois représentés des milliers de lignes de codes et pouvaient comporter des vulnérabilités en termes de cybersécurité ou de potentiels problème de maintenance sur le long terme. 
 
-Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaCript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript, VB.NET, XML
-
-
+Il était donc important de pouvoir compter sur un outil afin d'analyser le code et déterminer comment l'améliorer, tant sur le plan de la sécurité que de la robustesse. Sonarqube a été choisi pour pluseieurs rasions. D'une part, il permet de réaliser une Analyse approfnodie de la qualité du code en détectant les bugs, les vulnérabilités, les code de mauvaise qualité et les duplication). De plus, cet outil en édition "community" opensource permet d'analyser un grand nombre de languages  (Azure Resource Manager, CloudFormation, C#, CSS, Docker, Flex, Go, HTML, Java, JavaCript, Kotlin, Kubernetes/Helm, PHP, Python, Ruby, Scala, Secrets, Terraform, TypeScript, VB.NET, XML). Sonarqube possède également un iterface graphique clair et moderne. 
 
 
+Dans un objectif de portabilité et de réplication, le projet se base sur Docker. 
 
 
-2. Table of contents
 
-3. how to install, test and use the project
+## 2. how to install, test and use the project
 
-   Install and test
+   ### 2.1 Install and test
 
    1. docker compose up --build
    2. docker logs sonarscanner
@@ -25,7 +23,7 @@ Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, F
    5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
    6. Check the analysis
   
-   Live use 
+   ### 2.2 Live use
 
    1. docker compose down -v (if you tested before)
    2. replace sonarqube-docker/project/restaurant with the folder you want to analyze
@@ -44,95 +42,3 @@ Languages supportés (Azure Resource Manager, CloudFormation, C#, CSS, Docker, F
    
 
 
-
-5. How to use the project
-
-
-Docker
-
-Docker Compose
-
-📝 Contenu du projet
-
-docker-compose.yml : Configuration Docker Compose pour SonarQube et SonarScanner
-
-.env.example : Exemple de fichier d’environnement
-
-sonar-project.properties : Exemple de configuration SonarScanner
-
-.gitignore : Fichiers/dossiers ignorés dans le repo Git
-
-report-task.txt : Rapport d'analyse SonarScanner
-
-⚙️ Déploiement rapide
-
-1️⃣ Cloner ce dépôt :
-
-git clone https://github.com/<ton-utilisateur>/sonarqube-docker.git
-cd sonarqube-docker
-
-2️⃣ Démarrer les services :
-
-docker compose up --build
-
-3️⃣ Attendre que SonarQube soit prêt :
-
-Vérifier les logs du conteneur sonarscanner :
-
-docker logs sonarscanner
-
-Attendre les messages :
-
-INFO ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=test
-INFO EXECUTION SUCCESS
-
-4️⃣ Accéder à l'interface web :
-
-http://<ip_serveur>:9000
-
-5️⃣ Connexion initiale :
-
-Login : admin
-
-Password : admin
-
-👉 À la première connexion :
-
-SonarQube demande de changer le mot de passe. Exemple :
-
-Nouveau mot de passe : Admin1234567?
-
-6️⃣ Consulter l’analyse :
-
-Accéder au tableau de bord du projet :Tableau de bord SonarQube (local)
-
-🔐 Remarques de sécurité
-
-Important : Ne jamais utiliser admin/admin en production.
-
-Préférer l’utilisation de tokens d’analyse pour authentifier SonarScanner.
-
-📂 Structure recommandée
-
-sonarqube-docker/
-├── .env.example
-├── .gitignore
-├── docker-compose.yml
-├── sonar-project.properties
-├── report-task.txt
-└── README.md
-
-💍 .gitignore
-
-Le fichier .gitignore ignore notamment :
-
-.env
-*.log
-*.tmp
-node_modules/
-__pycache__/
-.DS_Store
-
-📝 Auteur
-
-Projet maintenu par [Ton Nom ou Organisation].
