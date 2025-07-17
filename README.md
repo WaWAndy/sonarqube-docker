@@ -47,7 +47,7 @@ If the SonarScanner analysis fails, execute the following commands:
    2. _docker compose up --build_
    3. Follow steps from 2.1 or 2.2
 
-## 4. Improuvements
+## 4. Improvements
 
    1. After making changes in the working directory, it is necessary to run a new analysis to see the results in the web interface. Each analysis evaluates the entire folder as a whole. It would be interesting to find a way to analyze only the modified files.
 
