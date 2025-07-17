@@ -16,7 +16,7 @@ To ensure portability and reproducibility, the project is based on **Docker**.
 
 ## 2. how to install, test and use the project
 
-   ### 2.1 Install and test
+   ### 2.1 Installation and test
 
    1. _docker compose up --build_
    2. _docker logs sonarscanner_
@@ -25,7 +25,7 @@ To ensure portability and reproducibility, the project is based on **Docker**.
    5. Default credentials are: admin, admin. Change to Admin1234567? for test purpose
    6. Check the analysis
   
-   ### 2.2 Live use
+   ### 2.2 How to analyze your project
 
    1. _docker compose down -v_ (if you tested before)
    2. Replace sonarqube-docker/project/restaurant with the folder you want to analyze
@@ -43,4 +43,10 @@ To ensure portability and reproducibility, the project is based on **Docker**.
     
    
 
+## 3. Potential issues
+
+If the sonarscanner analysis fails, execute the following commands: 
+    1. _docker compose down -v_
+    2. _docker compose up --build_ 
+    3. Restart steps from 2.1 or 2.2
 
