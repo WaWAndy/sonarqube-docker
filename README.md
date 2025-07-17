@@ -12,8 +12,6 @@ In addition, this tool, in its open-source "Community" edition, supports the **a
 To ensure portability and reproducibility, the project is based on **Docker**.
 
 
-
-
 ## 2. how to install, test and use the project
 
    ### 2.1 Installation and test
@@ -41,8 +39,15 @@ To ensure portability and reproducibility, the project is based on **Docker**.
    10. Wait for the new analysis to be done and successfull
    11. Refresh the page on http://sonarqube:9000 and you will see you modification in the analyzed codebase
     
-   
-
 ## 3. Potential issues
 
+If the SonarScanner analysis fails, execute the following commands:
+
+   1. _docker compose down -v_
+   2. _docker compose up --build_
+   3. Follow steps from 2.1 or 2.2
+
+## 4. Improuvements
+
+   1. After making changes in the working directory, it is necessary to run a new analysis to see the results in the web interface. Each analysis evaluates the entire folder as a whole. It would be interesting to find a way to analyze only the modified files.
 
