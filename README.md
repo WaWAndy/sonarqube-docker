@@ -41,6 +41,8 @@ To ensure portability and reproducibility, the project is based on **Docker**.
     
 ## 3. Potential issues
 
+If the SonarScanner analysis fails, execute the following commands:
+
    1. _docker compose down -v_
    2. _docker compose up --build_
    3. Follow steps from 2.1 or 2.2
