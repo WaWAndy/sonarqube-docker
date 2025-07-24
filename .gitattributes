@@ -1,3 +1,4 @@
 Dockerfile linguist-language=Dockerfile
+docker-compose.yml linguist-language=Dockerfile
 *.yml linguist-language=Dockerfile
 
