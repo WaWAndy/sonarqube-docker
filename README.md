@@ -41,7 +41,9 @@ To ensure portability and reproducibility, the project is based on **Docker**.
     
 ## 3. Potential issues
 
-If the SonarScanner analysis fails, execute the following commands:
+For now, two issues have been identified: authentication to SonarQube or the SonarScanner analysis may potentially fail.
+
+In that case, run the following commands:
 
    1. _docker compose down -v_
    2. _docker compose up --build_
